@@ -1,0 +1,43 @@
+<%
+//user = typeof user !== 'undefined' ? user : 'bel(e) inconnu(e)'
+%>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Test EJS</title>
+</head>
+<body>
+    
+    <p>Ceci est ma première page EJS</p>
+    <h1>Bonjour 
+        
+        <%  if(user.nickname===undefined && user.sex ===undefined){ %>
+                <b>bel(le) inconnu(e)</b>
+            <%}
+            else if(user.nickname===undefined && user.sex ==='male'){%>
+                <b>bel inconnu</b>
+            <%}
+            else if(user.nickname===undefined && user.sex ==='female'){%>
+                <b>belle inconnue</b>
+            <%}
+            else if(user.nickname!==undefined && user.sex ===undefined){%>
+                <%= user.nickname %>
+            <%}
+            else if(user.nickname!==undefined && user.sex ===undefined){%>
+                <%= user.nickname %>
+            <%}
+            else if(user.nickname!==undefined && user.sex ==='male'){%>
+               <b>Monsieur </b><%= user.nickname %> 
+            <%}
+            else if(user.nickname!==undefined && user.sex ==='female'){%>
+               <b>Madame </b><%= user.nickname %> 
+            <%}
+        %> 
+    </h1>
+
+</body>
+</html>
