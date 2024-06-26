@@ -7,3 +7,14 @@
     <title>Test EJS</title>
 </head>
 <body>
+    <%- include('../partials/header')%>
+
+    <div id="content">
+        <div class="scrollable">
+            <%- body %>
+        </div>
+
+    </div>
+    <%- include('../partials/footer')%>
+</body>
+</html>

@@ -1,35 +1,7 @@
-<%- include('../partials/head')%>
-
-<%
-//user = typeof user !== 'undefined' ? user : 'bel(e) inconnu(e)'
-%>
 
     
     <p>Ceci est ma première page EJS</p>
-    <h1>Bonjour 
+    <h1>Bonjour <%= user %> </h1>
         
-        <%  if(user.nickname===undefined && user.sex ===undefined){ %>
-                <b>bel(le) inconnu(e)</b>
-            <%}
-            else if(user.nickname===undefined && user.sex ==='male'){%>
-                <b>bel inconnu</b>
-            <%}
-            else if(user.nickname===undefined && user.sex ==='female'){%>
-                <b>belle inconnue</b>
-            <%}
-            else if(user.nickname!==undefined && user.sex ===undefined){%>
-                <%= user.nickname %>
-            <%}
-            else if(user.nickname!==undefined && user.sex ===undefined){%>
-                <%= user.nickname %>
-            <%}
-            else if(user.nickname!==undefined && user.sex ==='male'){%>
-               <b>Monsieur </b><%= user.nickname %> 
-            <%}
-            else if(user.nickname!==undefined && user.sex ==='female'){%>
-               <b>Madame </b><%= user.nickname %> 
-            <%}
-        %> 
-    </h1>
+        
 
-<%- include('../partials/foot')%>
